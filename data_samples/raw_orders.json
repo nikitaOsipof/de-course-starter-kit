@@ -1,122 +1,122 @@
 [
     {
         "id": 1001,
-        "timestamp": "2026-07-05T12:01:00",
-        "status": "processing",
-        "amount": 463.65
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1002,
-        "timestamp": "2026-07-05T12:02:00",
-        "status": "processing",
-        "amount": 469.62
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1003,
-        "timestamp": "2026-07-05T12:03:00",
+        "timestamp": "2026-07-05T12:00:00",
         "status": "new",
-        "amount": 139.83
+        "amount": 100.0
     },
     {
         "id": 1004,
-        "timestamp": "2026-07-05T12:04:00",
-        "status": "processing",
-        "amount": 254.54
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1005,
-        "timestamp": "2026-07-05T12:05:00",
-        "status": "processing",
-        "amount": 149.28
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1006,
-        "timestamp": "2026-07-05T12:06:00",
+        "timestamp": "2026-07-05T12:00:00",
         "status": "new",
-        "amount": 76.29
+        "amount": 100.0
     },
     {
         "id": 1007,
-        "timestamp": "2026-07-05T12:07:00",
-        "status": "bad_status",
-        "amount": 308.53
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1008,
-        "timestamp": "2026-07-05T12:08:00",
-        "status": "processing",
-        "amount": 324.94
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1009,
-        "timestamp": "2026-07-05T12:09:00",
-        "status": "processing",
-        "amount": 365.31
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1010,
-        "timestamp": "2026-07-05T12:10:00",
-        "status": "processing",
-        "amount": -50.0
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1011,
-        "timestamp": "2026-07-05T12:11:00",
-        "status": "done",
-        "amount": 370.26
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1012,
-        "timestamp": "2026-07-05T12:12:00",
+        "timestamp": "2026-07-05T12:00:00",
         "status": "new",
-        "amount": 26.85
+        "amount": 100.0
     },
     {
         "id": 1013,
-        "timestamp": "2026-07-05T12:13:00",
+        "timestamp": "2026-07-05T12:00:00",
         "status": "new",
-        "amount": 31.65
+        "amount": 100.0
     },
     {
         "id": 1014,
-        "timestamp": "2026-07-05T12:14:00",
-        "status": "bad_status",
-        "amount": 456.56
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1015,
-        "timestamp": "2026-07-05T12:15:00",
+        "timestamp": "2026-07-05T12:00:00",
         "status": "new",
-        "amount": 370.67
+        "amount": 100.0
     },
     {
         "id": 1016,
-        "timestamp": "2026-07-05T12:16:00",
-        "status": "processing",
-        "amount": 400.11
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1017,
-        "timestamp": "2026-07-05T12:17:00",
-        "status": "processing",
-        "amount": 300.16
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1018,
-        "timestamp": "2026-07-05T12:18:00",
+        "timestamp": "2026-07-05T12:00:00",
         "status": "new",
-        "amount": 26.09
+        "amount": 100.0
     },
     {
         "id": 1019,
-        "timestamp": "2026-07-05T12:19:00",
-        "status": "processing",
-        "amount": 79.67
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     },
     {
         "id": 1020,
-        "timestamp": "2026-07-05T12:20:00",
-        "status": "processing",
-        "amount": -50.0
+        "timestamp": "2026-07-05T12:00:00",
+        "status": "new",
+        "amount": 100.0
     }
 ]
