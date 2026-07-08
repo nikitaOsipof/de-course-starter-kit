@@ -16,10 +16,9 @@ jobs:
         version: "latest"
     - name: Set up Python
       run: uv python install 3.11
-    - name: Install dependencies
+    - name: Install dependencies from TOML
       run: |
-        uv pip install --system -r requirements.txt
-        uv pip install --system ruff mypy pytest
+        uv pip install --system -e .[dev]
     - name: Lint with Ruff
       run: ruff check src/
     - name: Type check with Mypy

@@ -11,5 +11,5 @@ def create_fixtures():
             f.write(f"{t}|{level}|Test message\n")
     orders = [{"id": 1000+i, "timestamp": start_time.isoformat(), "status": "new", "amount": 100.0} for i in range(1, 21)]
     with open("data_samples/raw_orders.json", "w", encoding="utf-8") as f: json.dump(orders, f, indent=4)
-    print("[Успех] Файлы данных сгенерированы.")
+    print("[Успех] Локальные файлы данных сгенерированы в data_samples/")
 if __name__ == "__main__": create_fixtures()
