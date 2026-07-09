@@ -76,7 +76,7 @@ dependencies = [
     { name = "sqlalchemy" },
 ]
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
     { name = "mypy" },
     { name = "pytest" },
@@ -86,16 +86,19 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "mypy", marker = "extra == 'dev'" },
     { name = "polars", specifier = "==0.20.5" },
     { name = "psycopg2-binary", specifier = "==2.9.9" },
     { name = "pydantic", specifier = "==2.5.3" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = "==8.0.0" },
-    { name = "ruff", marker = "extra == 'dev'" },
     { name = "sqlalchemy", specifier = "==2.0.25" },
-    { name = "types-psycopg2", marker = "extra == 'dev'" },
 ]
-provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "mypy" },
+    { name = "pytest", specifier = "==8.0.0" },
+    { name = "ruff" },
+    { name = "types-psycopg2" },
+]
 
 [[package]]
 name = "greenlet"
