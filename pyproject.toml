@@ -16,6 +16,7 @@ dev = [
     "pytest==8.0.0",
     "ruff",
     "mypy",
+	"types-psycopg2",
 ]
 
 [tool.ruff]
@@ -28,11 +29,6 @@ target-version = "py311"
 python_version = "3.11"
 warn_return_any = true
 warn_unused_configs = true
-
-[dependency-groups]
-dev = [
-    "types-psycopg2>=2.9.21.20260518",
-]
 
 [tool.setuptools.packages.find]
 where = ["src"]
