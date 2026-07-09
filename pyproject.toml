@@ -1,4 +1,4 @@
-﻿[project]
+[project]
 name = "de-course-starter-kit"
 version = "0.1.0"
 description = "Стартовый репозиторий для магистров по курсу Python для инженерии данных"
@@ -28,3 +28,14 @@ target-version = "py311"
 python_version = "3.11"
 warn_return_any = true
 warn_unused_configs = true
+
+[dependency-groups]
+dev = [
+    "types-psycopg2>=2.9.21.20260518",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv]
+package = true
