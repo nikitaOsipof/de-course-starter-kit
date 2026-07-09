@@ -11,27 +11,33 @@ dependencies = [
     "sqlalchemy==2.0.25",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
     "pytest==8.0.0",
     "ruff",
     "mypy",
-	"types-psycopg2",
+    "types-psycopg2",
 ]
-
-[tool.ruff]
-select = ["E", "F", "W", "I"]
-ignore = []
-line-length = 79
-target-version = "py311"
-
-[tool.mypy]
-python_version = "3.11"
-warn_return_any = true
-warn_unused_configs = true
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.uv]
 package = true
+
+[tool.ruff.lint]
+# Включаем базовые правила (E, F, W) и сортировку импортов (I)
+select = ["E", "F", "W", "I"]
+ignore = [
+    "F401", # Игнорируем неиспользуемые импорты (так как это заготовки для студентов)
+    "E701", # Игнорируем написание "pass" на одной строке с двоеточием в заготовках
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
