@@ -1,27 +1,43 @@
 ﻿name: Code Quality Check
+
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+
     steps:
+    # 1. Скачиваем код репозитория
     - name: Checkout code
       uses: actions/checkout@v4
+
+    # 2. Устанавливаем uv
     - name: Set up uv
       uses: astral-sh/setup-uv@v3
       with:
         version: "latest"
+
+    # 3. Устанавливаем Python 3.11 через uv
     - name: Set up Python
       run: uv python install 3.11
-    - name: Install dependencies from TOML
+
+    # 4. Синхронизируем окружение по uv.lock (включая dev-зависимости)
+    - name: Install dependencies from Lock-file
       run: |
-        uv pip install --system -e .[dev]
+        uv sync --all-groups --system
+
+    # 5. Проверка стиля кода через Ruff
     - name: Lint with Ruff
       run: ruff check src/
+
+    # 6. Проверка строгой типизации через Mypy
     - name: Type check with Mypy
       run: mypy --ignore-missing-imports src/
+
+    # 7. Автоматический запуск Unit-тестов
     - name: Run tests with pytest
       run: pytest tests/ || true
