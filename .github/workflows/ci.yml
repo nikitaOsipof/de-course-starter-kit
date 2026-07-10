@@ -36,16 +36,16 @@ jobs:
     - name: Lint with Ruff
       run: |
         uv run ruff check src/
-      continue-on-error: true # Позволяет увидеть отчет, но не красит крестик в красный
+    #  continue-on-error: true # Позволяет увидеть отчет, но не красит крестик в красный
 
     # 6. Проверка строгой типизации через встроенный вызов uv run
     - name: Type check with Mypy
       run: |
         uv run mypy --ignore-missing-imports src/
-      continue-on-error: true
+      #continue-on-error: true
 
     # 7. Автоматический запуск Unit-тестов
     - name: Run tests with pytest
       run: |
         uv run pytest tests/
-      continue-on-error: true
+      #continue-on-error: true
