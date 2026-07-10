@@ -11,38 +11,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Скачиваем код репозитория
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # 2. Устанавливаем uv
+    # Обновляем экшен до стабильной версии
     - name: Set up uv
-      uses: astral-sh/setup-uv@v3
-      with:
-        version: "latest"
+      uses: astral-sh/setup-uv@v5
 
-    # 3. Устанавливаем Python 3.11 через uv
     - name: Set up Python
       run: uv python install 3.11
 
-    # 4. Создаем виртуальное окружение в облаке и ставим зависимости из uv.lock
-    # (БЕЗ использования флага --system, чтобы Linux не блокировал установку)
     - name: Install dependencies from Lock-file
       run: |
         uv sync --all-groups
 
-    # 5. Проверка стиля кода через встроенный вызов uv run
     - name: Lint with Ruff
       run: |
         uv run ruff check src/
 
-    # 6. Проверка строгой типизации через встроенный вызов uv run
     - name: Type check with Mypy
       run: |
         uv run mypy --ignore-missing-imports src/
 
-    # 7. Автоматический запуск Unit-тестов
+    # Запуск тестов. Теперь, когда в файле есть реальный assert, pytest вернет код 0
     - name: Run tests with pytest
       run: |
-        uv run pytest tests/ || true
-
+        uv run pytest tests/
