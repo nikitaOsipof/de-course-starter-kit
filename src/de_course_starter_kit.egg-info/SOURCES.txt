@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/de_course_starter_kit.egg-info/PKG-INFO
+src/de_course_starter_kit.egg-info/SOURCES.txt
+src/de_course_starter_kit.egg-info/dependency_links.txt
+src/de_course_starter_kit.egg-info/requires.txt
+src/de_course_starter_kit.egg-info/top_level.txt
+tests/test_etl_logic.py
