@@ -25,19 +25,24 @@ jobs:
     - name: Set up Python
       run: uv python install 3.11
 
-    # 4. Синхронизируем окружение по uv.lock (включая dev-зависимости)
+    # 4. Создаем виртуальное окружение в облаке и ставим зависимости из uv.lock
+    # (БЕЗ использования флага --system, чтобы Linux не блокировал установку)
     - name: Install dependencies from Lock-file
       run: |
-        uv sync --all-groups --system
+        uv sync --all-groups
 
-    # 5. Проверка стиля кода через Ruff
+    # 5. Проверка стиля кода через встроенный вызов uv run
     - name: Lint with Ruff
-      run: ruff check src/
+      run: |
+        uv run ruff check src/
 
-    # 6. Проверка строгой типизации через Mypy
+    # 6. Проверка строгой типизации через встроенный вызов uv run
     - name: Type check with Mypy
-      run: mypy --ignore-missing-imports src/
+      run: |
+        uv run mypy --ignore-missing-imports src/
 
     # 7. Автоматический запуск Unit-тестов
     - name: Run tests with pytest
-      run: pytest tests/ || true
+      run: |
+        uv run pytest tests/ || true
+
